@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="App flex flex-col justify-between h-screen ">
         <Navbar />
-        <main>
+        <main className='py-10 container mx-auto px-4 '>
           <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/about' element={<About />}/>
