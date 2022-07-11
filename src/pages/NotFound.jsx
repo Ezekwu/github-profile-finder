@@ -1,12 +1,12 @@
-import {FaHome, FaGithub} from 'react-icons/fa'
+import {FaHome} from 'react-icons/fa'
 import gitimg from '../assets/gitimg.png'
 import { Link } from 'react-router-dom'
 
 const NotFound = () => {
     return (
         <div className='hero hero-center '>
-            <div className="hero-content  flex flex-col  ">
-                <div className='flex  items-center text-center'>
+            <div className="hero-content  flex flex-col  text-center">
+                <div className='flex  items-center '>
                     <h1 className='text-20xl'>4</h1>
                     <img src={gitimg} alt=""  className='w-36'/>
                     <h1 className='text-20xl'>4</h1>
