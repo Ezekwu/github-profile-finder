@@ -22,7 +22,7 @@ export const GithubProvider = ({ children }) => {
             type:'SET_LOADING',
         })
     }
-    // just for testing purposes
+    // search inputed users
     const searchUsers = async ( text ) => {
         setLoading()
 
