@@ -15,7 +15,7 @@ const UserSearch = () => {
         e.preventDefault()
 
         if(text === ''){
-            setAlert('please type something' , 'error')
+            setAlert('please type something' , 'Error')
         } else{
             searchUsers(text)
             setText('')

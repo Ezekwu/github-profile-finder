@@ -3,10 +3,8 @@ import { useContext } from 'react'
 import Loader from '../layout/Loader';
 import UserItem from './UserItem';
 import GithubContext from '../../context/github/GithubContext';
-import AlertContext from '../../context/alert/AlertContext';
 const UserResults = () => {
     const { users, loading } = useContext(GithubContext)
-    const {} = useContext(AlertContext)
 
     if(!loading){
         return (

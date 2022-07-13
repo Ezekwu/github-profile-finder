@@ -46,3 +46,34 @@
 .user-item:hover{
   box-shadow: 0px 4px 10px #06a4f9c5;
 }
+
+.image-container{
+  position: relative;
+  z-index: 10000;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8) , rgba(0,0,0,0.7));
+  border-radius: .8rem;
+
+}
+
+.profile-img{
+  opacity: .7;
+}
+
+.label{
+  padding: 3px 10px;
+  border-radius: 50px;
+  
+}
+
+.type{
+  background-color: rgba(93, 231, 144, 0.082);
+}
+
+.hire{
+  color: #4dc1ffc5;
+  background-color: #06a4f913;
+}
+
+.social{
+  border-right: 2px solid rgba(68, 68, 68, 0.767);
+}

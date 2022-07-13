@@ -11,7 +11,7 @@ const UserItem = ({ user:{login, avatar_url} }) => {
 
             <div className='flex flex-col'>
                 <h2 className='font-bold'>{login}</h2>
-                <Link to={`/users/${login}`} className='font-light text-sm'>View Profile</Link>
+                <Link to={`/user/${login}`} className='font-light text-sm'>View Profile</Link>
             </div>
             
         </div>

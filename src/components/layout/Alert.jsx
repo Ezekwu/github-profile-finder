@@ -11,8 +11,8 @@ const Alert = () => {
                 <div className='flex  space-x-4 items-center rounded border-solid border-4 border-l-red-500  text-black px-4  '>
                     <FaTimesCircle className='text-red-500 text-2xl'/>
                     <div>
-                        <h3 className='font-bold'>Error</h3>
-                        <p className='text-gray-400 text-sm'> please type in something</p>
+                        <h3 className='font-bold'>{alert.type}</h3>
+                        <p className='text-gray-400 text-sm'> {alert.msg}</p>
                     </div>
                 </div>
             </div>
