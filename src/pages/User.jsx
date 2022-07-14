@@ -5,14 +5,16 @@ import Loader from '../components/layout/Loader'
 import { useParams } from 'react-router-dom'
 import { useEffect, useContext } from 'react'
 import GithubContext from '../context/github/GithubContext'
+import ReposList from '../components/repos/ReposList'
 
 const User = () => {
-    const { getUser, user, loading } = useContext(GithubContext)
+    const { getUser, user, getUserRepos, repos, loading } = useContext(GithubContext)
     const params = useParams()
     
 
     useEffect(() =>{
         getUser(params.login)
+        getUserRepos(params.login)
     }, [])
 
     const {
@@ -50,11 +52,11 @@ const User = () => {
                         </div>
                     </div> 
                     
-                    <div >
+                    <div className='w-full' >
                         <div className='font-bold flex space-x-4 items-center mb-3'> 
                             <h1 className=' text-3xl'>{name}</h1>
-                            <h3 className='label  text-sm type  text-green-500'>{type}</h3>
-                            {hireable && <h3 className='label hire'>Hireable</h3>}
+                            <h3 className='label  text-sm green-bg  text-green-500'>{type}</h3>
+                            {hireable && <h3 className='label blue-bg'>Hireable</h3>}
                         </div>
 
                         <p className='mb-8'>{bio}</p>
@@ -62,8 +64,8 @@ const User = () => {
                         <a href={html_url} target='_blank' rel="noreferrer" className='btn btn-outline text-gray-200 hover:bg-gray-200 mb-8'>VISIT GITHUB PROFILE</a>
 
                         <div className='shadow-md p-2'>
-                            <div className=' flex flex-col md:flex-row  '>
-                                { location && <div className='social p-3 pr-8 pl-6 w-full'>
+                            <div className='social flex flex-col md:flex-row   '>
+                                { location && <div className=' p-3 pr-8 pl-6 w-full'>
                                                 <div className='text-gray-400 mb-2 flex gap-2 items-center'>
                                                     <i className="fa-solid fa-location-dot "></i>
                                                     <h3 className=''>location</h3>
@@ -71,10 +73,10 @@ const User = () => {
                                                 <p className='font-bold'>{location}</p>
                                             </div> }
                                 
-                                {blog && <div className='social p-3 pr-8 pl-6 w-full'>
+                                {blog && <div className=' p-3 pr-8 pl-6 w-full'>
                                             <div className='text-gray-400 mb-2 flex gap-2 items-center'>
                                                 <FaLink />
-                                                <h3 className=''>location</h3>
+                                                <h3 className=''>Website</h3>
                                             </div>
                                             <a href={`https://${blog}`} target='_blank' rel="noreferrer"className='font-bold'>{blog}</a>
                                         </div> }
@@ -91,9 +93,9 @@ const User = () => {
                         </div>
                     </div>
                 </div>
-                <div className='shadow-md p-2'>
-                        <div className='p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-                            <div className='social p-4 flex items-center justify-between '>
+                <div className='shadow-md p-2 mb-6'>
+                        <div className=' social p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+                            <div className=' p-4 flex items-center justify-between '>
                                 <div >
                                     <h3 className='text-gray-400'>Followers</h3>
                                     <h2 className='text-3xl font-bold'>{followers}</h2>
@@ -101,7 +103,7 @@ const User = () => {
                                 <FaUsers className='text-4xl text-blue-400' />
                             </div>
 
-                            <div className='social p-4 flex items-center justify-between '>
+                            <div className=' p-4 flex items-center justify-between '>
                                 <div >
                                     <h3 className='text-gray-400'>Following</h3>
                                     <h2 className='text-3xl font-bold'>{following}</h2>
@@ -109,7 +111,7 @@ const User = () => {
                                 <FaUserFriends className='text-4xl text-purple-400' />
                             </div>
 
-                            <div className='social p-4 flex items-center justify-between '>
+                            <div className=' p-4 flex items-center justify-between '>
                                 <div >
                                     <h3 className='text-gray-400'>Public Repos</h3>
                                     <h2 className='text-3xl font-bold'>{public_repos}</h2>
@@ -126,6 +128,9 @@ const User = () => {
                             </div>
                         </div>
                     
+                </div>
+                <div>
+                    <ReposList repos={repos}/>
                 </div>
             </div>
         )

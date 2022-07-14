@@ -15,17 +15,12 @@ const About = () => {
             <strong>
                 <a href='https://traversymedia.com'> Brad Traversy</a>
             </strong>
-            .
+            . I tweaked it up a bit tho and added some extra styling 😉
             </p>
             <p className='text-lg text-gray-400'>
             Version <span className='text-white'>1.0.0</span>
             </p>
-            <p className='text-lg text-gray-400'>
-            Layout By:
-            <a className='text-white' href='https://twitter.com/hassibmoddasser'>
-                Hassib Moddasser
-            </a>
-            </p>
+            
         </>
     )
     }
