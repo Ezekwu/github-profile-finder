@@ -15,6 +15,7 @@ export const GithubProvider = ({ children }) => {
         user: {},
         repos:[],
         loading: false
+        
     }
     
     const [state, dispatch] = useReducer(githubReducer, initialState)
