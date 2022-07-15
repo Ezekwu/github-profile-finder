@@ -27,10 +27,10 @@ const UserSearch = () => {
             onSubmit={handleSubmit}>
                 <input type="text" 
                 placeholder='search'
-                className='input bg-gray-200 text-black w-60 rounded-r-none  lg:w-80 '
+                className='input bg-gray-200 text-black w-48 rounded-r-none md:w-80 lg:w-80 '
                 value={text}
                 onChange={handleChange}/>
-                <button className='btn rounded-l-none w-20' type='submit' ><FaSearch /> </button>
+                <button className='btn rounded-l-none w-16 md:w-20 lg:w-20 ' type='submit' ><FaSearch /> </button>
             </form>
 
             {users.length > 0 && <button className='btn btn-ghost' onClick={clearUsers}>clear</button>}

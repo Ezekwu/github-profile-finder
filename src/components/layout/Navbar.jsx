@@ -8,13 +8,13 @@ const Navbar = () => {
                 <Link to='/'>
                     <div className="flex items-center space-x-2">
                     <FaGithub className='text-3xl'/>
-                    <h3 className='font-bold text-lg'>Github Finder</h3>
+                    <h3 className='font-bold text-xs xl:text-lg lg:text-lg md:text-lg'>Github Finder</h3>
                     </div>
                 </Link>
 
-                <div className='flex items-center space-x-6 font-bold text-lg '> 
-                    <Link to='/' className='btn btn-ghost'>Home</Link>
-                    <Link to='/about'className='btn btn-ghost'>About</Link>
+                <div className='flex items-center space-x-0 font-bold '> 
+                    <Link to='/' className='btn btn-ghost text-xs xl:text-lg lg:text-lg md:text-lg'>Home</Link>
+                    <Link to='/about'className='btn btn-ghost text-xs xl:text-lg lg:text-lg md:text-lg'>About</Link>
                 </div>
             </div>
         </nav>
