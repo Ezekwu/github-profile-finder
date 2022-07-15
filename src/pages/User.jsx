@@ -63,8 +63,7 @@ const User = () => {
                         <p className='mb-8'>{bio}</p>
 
                         <a href={html_url} target='_blank' rel="noreferrer" className='btn btn-outline text-gray-200 hover:bg-gray-200 mb-8'>VISIT GITHUB PROFILE</a>
-
-                        <div className='shadow-md p-2'>
+                        {(location || blog || twitter_username) && <div className='shadow-md p-2'>
                             <div className='social flex flex-col md:flex-row   '>
                                 { location && <div className=' p-3 pr-8 pl-6 w-full'>
                                                 <div className='text-gray-400 mb-2 flex gap-2 items-center'>
@@ -91,7 +90,8 @@ const User = () => {
                                 </div>  }
                                 
                             </div>
-                        </div>
+                        </div>}
+                        
                     </div>
                 </div>
                 <div className='shadow-md p-2 mb-6'>
