@@ -85,3 +85,8 @@
 .red-bg{
   background-color: rgba(240, 10, 10, 0.065);
 }
+@media (max-width:768px){
+  .social > div:not(:last-child) {
+    border: none;
+  }
+}

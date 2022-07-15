@@ -44,9 +44,9 @@ const User = () => {
             <div className='text-gray-200 w-full'>
                 <Link to='/'className='btn btn-ghost mb-6'> BACK TO SEARCH</Link>
                 <div className='flex flex-col mb-6  gap-10 lg:flex-row'>
-                    <div className='image-container shadow-2xl  w-64 md:w-96 lg:w-96 xl:w-96 ' >
+                    <div className='image-container shadow-2xl  w-full md:w-96 lg:w-96 xl:w-96 ' >
                         
-                        <img src={avatar_url} alt="" className='rounded-md w-64 md:w-96 lg:w-96 xl:w-96 h-full profile-img'/>
+                        <img src={avatar_url} alt="" className='rounded-md w-full md:w-96 lg:w-96 xl:w-96 h-full profile-img'/>
                         <div className='absolute bottom-8 left-8 ' >
                             <h2 className='font-bold text-lg'>{name}</h2>
                             <h4>{login}</h4>
