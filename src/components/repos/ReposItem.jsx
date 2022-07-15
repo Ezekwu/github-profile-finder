@@ -6,7 +6,7 @@ const ReposItem = ({ repo }) => {
 
     const {
         name,
-        private: privateRepo,
+        
         description,
         html_url,
         forks,
