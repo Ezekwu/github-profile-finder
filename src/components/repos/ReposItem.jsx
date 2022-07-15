@@ -20,6 +20,7 @@ const ReposItem = ({ repo }) => {
                 <a href={html_url} target='_blank' rel="noreferrer">
                 <FaLink className='inline mr-2'/>
                 {name}
+            
                 </a>
                 
             </div>
