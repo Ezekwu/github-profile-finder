@@ -8,7 +8,7 @@ const Navbar = () => {
                 <Link to='/'>
                     <div className="flex items-center space-x-2">
                     <FaGithub className='text-3xl'/>
-                    <h3 className='font-bold text-xs xl:text-lg lg:text-lg md:text-lg'>Github Finder</h3>
+                    <h3 className='font-bold text-sm xl:text-xl lg:text-xl md:text-xl'>Github Finder</h3>
                     </div>
                 </Link>
 
